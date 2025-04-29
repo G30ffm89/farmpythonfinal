@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% if current_user.has_role('unauth') %}
+<div>
+    <h1>Your account has not been approved by an admin</h1>
+</div>
+{% endif %}
+{% endblock body %}

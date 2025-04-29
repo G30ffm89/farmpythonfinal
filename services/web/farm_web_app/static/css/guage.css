@@ -1,0 +1,21 @@
+#humid-container {
+  min-width: 380px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#temp-container {
+  min-width: 380px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#time-container {
+  min-width: 380px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+
+}

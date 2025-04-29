@@ -1,0 +1,34 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+
+<script>
+    $(document).ready(function() {
+      setInterval(function() {
+        $.getJSON('/_get_data', function(data) {
+          if (data.error) {
+            console.error(data.error);
+          } else {
+            // Update SVG elements based on data
+            updateTemperatureGauge(data.temperature);
+            const tempnume = document.getElementById('tempnum');
+            tempnume.textContent = '12°C';
+            updateHumidityGauge(data.humidity);
+          }
+        });
+      }, 10000); // Update every 10 seconds
+    });
+  </script>
+<script>
+  function showMushroomInfo() {
+    var selectElement = document.getElementById("choose_climate");
+    var selectedMushroom = selectElement.value;
+    var infoDisplay = document.getElementById("mushroom_info"); 
+  
+    infoDisplay.innerHTML = ""; 
+
+    if (selectedMushroom === "Lions Mane") {
+      infoDisplay.innerHTML = "<h3>Lion's Mane</h3><p>Known for supporting brain health and cognitive function...</p>"; 
+    } else if (selectedMushroom === "Reishi") {
+      infoDisplay.innerHTML = "<h3>Reishi</h3><p>Often referred to as the 'mushroom of immortality'...</p>";
+    } 
+  }
+  </script>
